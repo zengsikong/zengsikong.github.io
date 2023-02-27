@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="icon" href="../../cn-doge-favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <a href="../../index.html"><img src="../../images/mysig.png" alt="signature"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="../../notes/notes-index.html">Notes</a></li>
+                <li><a href="../../apps/apps-index.html">Apps</a></li>
+                <li><a href="../../misc/misc-index.html">Misc</a></li>
+            </ul>
+        </nav>
+        <a href="../../contact-me.html"><button>Contact</button></a>
+    </header>
+    <nav>
+
+        <div class="top-container">
+            <h1>Linux</h1>
+        </div>
+
+        <div class="middle-container">
+            <p>In general if you know the name of a command, you can check the man pages via the man command + name of
+                the command to check what switches you can use.</p>
+            <hr>
+            <h3>Permission/user manipulation</h3>
+            <p>
+                Add user to sudoers without being in sudoers while having access to root (Debian netinstall).
+                This is more useful with a multiuser setup, in a single user setup you technically can just install
+                the distro with a single user that has sudo rights.
+            </p>
+
+            <pre>
+                <code>
+                    # gain access to root, type in password
+                    
+                    $ su -
+                    
+                    # a = append, otherwise you don't add default groups
+                    # G =  the group, without -a you will be removed from everything other than -G
+                    
+                    $ usermod -a -G sudo username
+                    
+                    # lowercase g = changing user's primary group
+                    # After adding the pre-existing user to sudo, reboot.
+
+                    # Remove user from group, multiple ways
+                    
+                    $ sudo gpasswd --delete userName groupName
+                    $ sudo deluser userName groupName
+                    $ vim /etc/group
+                </code>
+            </pre>
+            <p>Use chown to change owner, for example when dealing with windows files copied over...</p>
+            <pre>
+                <code>
+                    # this one does it recursively
+                    $ sudo chown username:username -R directoryName/
+                </code>
+            </pre>
+            <p>
+                Use chmod to change permissions, this one in particular is useful when sharing SSH keys between Windows
+                and WSL2 on the same desktop computer.
+                Use umask for setting default permissions of newly created files, and chgrp to change group.
+            </p>
+            <pre>
+                <code>
+                    $ chmod 600 ~/.ssh/id_ed25519
+                </code>
+            </pre>
+            <p>Since I mentioned chmod, quick refresher for permissions...</p>
+            <pre>
+                <code>
+                    r = read permission
+                    w = write permission
+                    x = execute permission
+
+                    # apparently this is all octal, just memorize this...
+                    
+                    r = 4
+                    w = 2
+                    x = 1
+                    - = 0
+                </code>
+            </pre>
+
+            <p>Use the id command to list a user's current groups.</p>
+            <pre>
+                <code>
+                    $ id myUsername
+
+                    # list all users
+
+                    $ cat /etc/passwd
+
+                    # list all groups
+
+                    $ cat /et/group
+                </code>
+            </pre>
+
+            <hr>
+            <h3>System Info</h3>
+            <p>Check memory stats</p>
+            <pre>
+                <code>
+                    # -m = megabyte -h = human readable (Gb)
+                    
+                    $ free -h
+                    $ cat /proc/meminfo
+                </code>
+            </pre>
+            <p>Check kernel version</p>
+            <pre>
+                <code>
+                    $ uname -r
+                    
+                    #print all info
+                    
+                    $ uname -a
+
+                    # print architecture specifically
+
+                    #uname -m
+                </code>
+            </pre>
+            <p>Print disk usage</p>
+            <pre>
+                <code>
+                    # print disk usage in power of 1000
+                    
+                    $ df --si
+                </code>
+            </pre>
+            <p>Check core count of cpu</p>
+            <pre>
+                <code>
+                    $ nproc --all
+                </code>
+            </pre>
+            <p>Check virtualization support, use egrep to enable `|` feature.</p>
+            <pre>
+                <code>
+                    $ egrep "vmx|svm" /proc/cpuinfo
+                </code>
+            </pre>
+            <p>Find out GPU</p>
+            <pre>
+                <code>
+                    $ lspci | grep "VGA"
+                </code>
+            </pre>
+            <p>Find out CPU model</p>
+            <pre>
+                <code>
+                    $ sed -n "/model name/p" /proc/cpuinfo | head -1
+                </code>
+            </pre>
+            <hr>
+            <h3>Latitude 7490 Specific</h3>
+            <p>This laptop has issues with power management on Linux from my experience. In particular when it comes to sleep/hibernation,
+                a stop gap "solution" that is probably here to stay is (much more like sawing off your head to deal with an headache) is to disable
+                cstate levels other than 0 & 1, alongside with power management features in general. Compared to running Windows this is subpar
+                for a laptop and defeats some of the purpose of having a laptop, however in my usecase I do need a Linux laptop for baremetal
+                compatibility and already frequently run a Windows machine. Aside from this issue the laptop runs fine on Linux, and is more
+                than sufficient.
+            </p>
+
+            <pre>
+                <code>
+                    $ vim /etc/default/grub
+                    # Edit GRUB_CMDLINE_LINUX_DEFAULT=""
+                    # e.g. GRUB_CMDLINE_LINUX_DEFAULT=""quiet intel_idle.max_cstate=1 i915.enable_dc=0 ahci.mobile_lpm_policy=1"
+                    sudo update-grub
+                </code>
+            </pre>
+
+            <p>Additional information to be added...</p>
+        </div>
+
+        <div class="bottom-container">
+            <a href="https://github.com/zengsikong"><img src="../../images/GitHub-Mark-64px.png" alt="Github"></a>
+            <p class="copyright">© 2022 Cody Zeng</p>
+        </div>
+
+</body>
+
+</html>

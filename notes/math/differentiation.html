@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<script defer src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differentiation</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="icon" href="../../cn-doge-favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <a href="../../index.html"><img src="../../images/mysig.png" alt="signature"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="../../notes/notes-index.html">Notes</a></li>
+                <li><a href="../../apps/apps-index.html">Apps</a></li>
+                <li><a href="../../misc/misc-index.html">Misc</a></li>
+            </ul>
+        </nav>
+        <a href="../../contact-me.html"><button>Contact</button></a>
+    </header>
+    <nav>
+        <div class="top-container">
+            <h1>Differentiation</h1>
+        </div>
+
+        <div class="middle-container">
+            <p>Slope of tangent (instantaneous change). If a function is differentiable at a point, then it must be continous there too.</p>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:munder> <mml:mrow> <mml:mi>l</mml:mi> <mml:mi>i</mml:mi> <mml:mi>m</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>Δ</mml:mi> <mml:mi>χ</mml:mi> <mml:mo>→</mml:mo> <mml:mi>∞</mml:mi> </mml:mrow> </mml:munder> <mml:mfrac> <mml:mrow> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> <mml:mo>+</mml:mo> <mml:mi>Δ</mml:mi> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>-</mml:mo> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> <mml:mrow> <mml:mi>Δ</mml:mi> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:munder> <mml:mrow> <mml:mi>l</mml:mi> <mml:mi>i</mml:mi> <mml:mi>m</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>Δ</mml:mi> <mml:mo>→</mml:mo> <mml:mi>∞</mml:mi> </mml:mrow> </mml:munder> <mml:mfrac> <mml:mrow> <mml:mi>Δ</mml:mi> <mml:mi>y</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>Δ</mml:mi> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> </mml:math>
+            </math>
+            <p>Handy rules</p>
+            1.
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>C</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mn>0</mml:mn> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>n</mml:mi> </mml:mrow> </mml:msup> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mi>n</mml:mi> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>n</mml:mi> <mml:mo>-</mml:mo> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            2.
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:msup> <mml:mrow> <mml:mn>1</mml:mn> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>0</mml:mn> </mml:mrow> </mml:msup> <mml:mo>=</mml:mo> <mml:mn>1</mml:mn> </mml:math>
+            </math>
+            <br>
+            3.
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>C</mml:mi> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mi>C</mml:mi> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> </mml:math>
+            </math>
+            <br>
+            4.
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>±</mml:mo> <mml:mi>g</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> <mml:mo>±</mml:mo> <mml:mfrac> <mml:mrow> <mml:mi>d</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>d</mml:mi> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>g</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:msup> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>f</mml:mi> <mml:mo>±</mml:mo> <mml:mi>g</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mo>=</mml:mo> <mml:msup> <mml:mrow> <mml:mi>f</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mo>±</mml:mo> <mml:msup> <mml:mrow> <mml:mi>g</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mi>o</mml:mi> <mml:mi>r</mml:mi> <mml:msup> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>u</mml:mi> <mml:mo>±</mml:mo> <mml:mi>v</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            5.
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mi>g</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> <mml:mi>g</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>+</mml:mo> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>g</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mfenced> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:msup> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>u</mml:mi> <mml:mi>v</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mo>=</mml:mo> <mml:msup> <mml:mrow> <mml:mi>u</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mi>v</mml:mi> <mml:mo>+</mml:mo> <mml:mi>u</mml:mi> <mml:msup> <mml:mrow> <mml:mi>v</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            6.
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:msup> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mfrac> <mml:mrow> <mml:mi>u</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>v</mml:mi> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:mfenced> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mo>=</mml:mo> <mml:mfrac> <mml:mrow> <mml:msup> <mml:mrow> <mml:mi>u</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mi>v</mml:mi> <mml:mo>-</mml:mo> <mml:mi>u</mml:mi> <mml:msup> <mml:mrow> <mml:mi>v</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> </mml:mrow> <mml:mrow> <mml:msup> <mml:mrow> <mml:mi>v</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:msup> </mml:mrow> </mml:mfrac> </mml:math>
+            </math>
+
+
+            <hr>
+            <p>Example(s)</p>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mn>2</mml:mn> <mml:mo>-</mml:mo> <mml:mn>3</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>4</mml:mn> </mml:mrow> </mml:msup> <mml:mo>+</mml:mo> <mml:mfrac> <mml:mrow> <mml:mn>4</mml:mn> </mml:mrow> <mml:mrow> <mml:msqrt> <mml:mi>x</mml:mi> </mml:msqrt> </mml:mrow> </mml:mfrac> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mi>y</mml:mi> <mml:mo>=</mml:mo> <mml:mn>2</mml:mn> <mml:mo>-</mml:mo> <mml:mn>3</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>4</mml:mn> </mml:mrow> </mml:msup> <mml:mo>+</mml:mo> <mml:mn>4</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>-</mml:mo> <mml:mfrac> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:msup> <mml:mrow> <mml:mi>y</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mo>=</mml:mo> <mml:mn>0</mml:mn> <mml:mo>-</mml:mo> <mml:mn>12</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>3</mml:mn> </mml:mrow> </mml:msup> <mml:mo>-</mml:mo> <mml:mn>2</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>-</mml:mo> <mml:mfrac> <mml:mrow> <mml:mn>3</mml:mn> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mi>f</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mn>4</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mfrac> <mml:mrow> <mml:mn>3</mml:mn> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi>ⅇ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:msup> <mml:mrow> <mml:mi>f</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mn>6</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mfrac> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi>ⅇ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:msup> <mml:mo>+</mml:mo> <mml:mn>4</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mfrac> <mml:mrow> <mml:mn>3</mml:mn> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi>ⅇ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:msup> <mml:mo>=</mml:mo> <mml:mn>2</mml:mn> <mml:msup> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> <mml:mrow> <mml:mfrac> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:mfrac> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi>ⅇ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:msup> <mml:mfenced separators="|"> <mml:mrow> <mml:mn>3</mml:mn> <mml:mo>+</mml:mo> <mml:mn>2</mml:mn> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:math>
+            </math>
+            <br>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mrow> <mml:mrow> <mml:mi mathvariant="italic">sin</mml:mi> </mml:mrow> <mml:mo>⁡</mml:mo> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mrow> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mrow> <mml:mrow> <mml:mi mathvariant="italic">cos</mml:mi> </mml:mrow> <mml:mo>⁡</mml:mo> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mrow> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:mrow> <mml:mrow> <mml:mi mathvariant="italic">cos</mml:mi> </mml:mrow> <mml:mo>⁡</mml:mo> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mrow> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mrow> <mml:mrow> <mml:mi mathvariant="italic">sin</mml:mi> </mml:mrow> <mml:mo>⁡</mml:mo> <mml:mrow> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfenced> </mml:mrow> </mml:mrow> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mfrac> <mml:mrow> <mml:mo>ⅆ</mml:mo> </mml:mrow> <mml:mrow> <mml:mo>ⅆ</mml:mo> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> <mml:mfenced separators="|"> <mml:mrow> <mml:msup> <mml:mrow> <mml:mi>ⅇ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:msup> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:msup> <mml:mrow> <mml:mi>ⅇ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:msup> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mi>y</mml:mi> <mml:mo>=</mml:mo> <mml:mn>2</mml:mn> <mml:mi>l</mml:mi> <mml:mi>n</mml:mi> <mml:mi>x</mml:mi> <mml:mo>=</mml:mo> <mml:mfrac> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> <mml:mrow> <mml:mi>x</mml:mi> </mml:mrow> </mml:mfrac> </mml:math>
+            </math>
+            <hr>
+            Calculate ball velocity after it's in the air for one second.
+            <br>
+
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mi>s</mml:mi> <mml:mfenced separators="|"> <mml:mrow> <mml:mi>t</mml:mi> </mml:mrow> </mml:mfenced> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mn>16</mml:mn> <mml:msup> <mml:mrow> <mml:mi>t</mml:mi> </mml:mrow> <mml:mrow> <mml:mn>2</mml:mn> </mml:mrow> </mml:msup> <mml:mo>-</mml:mo> <mml:mn>116</mml:mn> <mml:mi>t</mml:mi> <mml:mo>+</mml:mo> <mml:mn>96</mml:mn> </mml:math>
+            </math>
+            <br>
+            Find the derivative (slope of the tangent line), then substitute in 1 which will find the slope at that
+            point which will tell you the velocity.
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mo>-</mml:mo> <mml:mn>32</mml:mn> <mml:mi>t</mml:mi> <mml:mo>+</mml:mo> <mml:mn>16</mml:mn> </mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"> <mml:mo>-</mml:mo> <mml:mn>32</mml:mn> <mml:mfenced separators="|"> <mml:mrow> <mml:mn>1</mml:mn> </mml:mrow> </mml:mfenced> <mml:mo>+</mml:mo> <mml:mn>16</mml:mn> <mml:mo>=</mml:mo> <mml:mo>-</mml:mo> <mml:mn>16</mml:mn> </mml:math>
+            </math>
+            <hr>
+            <p>
+                Find the derivative <math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="italic">cos</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:mn>5</mml:mn><mml:mi>x</mml:mi><mml:mo>+</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:mfenced></mml:mrow></mml:mrow><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mi>ⅇ</mml:mi></mml:mrow><mml:mrow><mml:mn>7</mml:mn><mml:mo>-</mml:mo><mml:mn>3</mml:mn><mml:mi>x</mml:mi></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="italic">ln</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:mn>8</mml:mn><mml:mi>x</mml:mi><mml:mo>-</mml:mo><mml:mn>9</mml:mn></mml:mrow></mml:mfenced></mml:mrow></mml:mrow><mml:mo>+</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="italic">sin</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:msup><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:math></math>
+            </p>
+
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mo>-</mml:mo><mml:mi mathvariant="italic">sin</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:mn>5</mml:mn><mml:mi>x</mml:mi><mml:mo>+</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:mfenced></mml:mrow></mml:mrow><mml:mo>×</mml:mo><mml:mn>5</mml:mn><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mn>7</mml:mn><mml:mo>-</mml:mo><mml:mn>3</mml:mn><mml:mi>x</mml:mi></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mn>8</mml:mn></mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mn>8</mml:mn><mml:mi>x</mml:mi><mml:mo>-</mml:mo><mml:mn>9</mml:mn><mml:mo>)</mml:mo></mml:mrow></mml:mfrac><mml:mo>+</mml:mo><mml:mrow><mml:mrow><mml:mi mathvariant="italic">cos</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:msup><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mfenced></mml:mrow></mml:mrow><mml:mn>2</mml:mn><mml:mi>x</mml:mi></mml:math>
+            </math>
+            <br>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mrow><mml:mo>-</mml:mo><mml:mn>5</mml:mn><mml:mi mathvariant="italic">sin</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:mn>5</mml:mn><mml:mi>x</mml:mi><mml:mo>+</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:mfenced></mml:mrow></mml:mrow><mml:mo>-</mml:mo><mml:mn>3</mml:mn><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mn>7</mml:mn><mml:mo>-</mml:mo><mml:mn>3</mml:mn><mml:mi>x</mml:mi></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mn>8</mml:mn></mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mn>8</mml:mn><mml:mi mathvariant="normal">x</mml:mi><mml:mo>-</mml:mo><mml:mn>9</mml:mn><mml:mo>)</mml:mo></mml:mrow></mml:mfrac><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mi>x</mml:mi><mml:mrow><mml:mrow><mml:mi mathvariant="italic">cos</mml:mi></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mfenced separators="|"><mml:mrow><mml:msup><mml:mrow><mml:mi>x</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mfenced></mml:mrow></mml:mrow></mml:math>
+            </math>
+            <hr>
+            <p>Find <math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:msup><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math></math> if <math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="normal">t</mml:mi><mml:mi mathvariant="normal">a</mml:mi><mml:mi mathvariant="normal">n</mml:mi><mml:mo>⁡</mml:mo><mml:mo>(</mml:mo><mml:mn>5</mml:mn><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:math></math></p>
+            <math>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"><mml:msup><mml:mrow><mml:mi>y</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mn>5</mml:mn><mml:mrow><mml:mrow><mml:msup><mml:mrow><mml:mi mathvariant="normal">sec</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:mrow><mml:mo>⁡</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mn>5</mml:mn><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:math>
+            </math>
+
+
+
+        </div>
+
+        <div class="bottom-container">
+            <a href="https://github.com/zengsikong"><img src="../../images/GitHub-Mark-64px.png" alt="Github"></a>
+            <p class="copyright">© 2022 Cody Zeng</p>
+        </div>
+
+</body>
+
+</html>
